@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/app_bar_main"
+    android:orientation="vertical"
+
+    android:background="@color/background">
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/image"
+        android:layout_gravity="center"
+        android:layout_margin="8dp"
+        android:background="@drawable/ic_btc"
+
+        />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_margin="5dp"
+        app:cardBackgroundColor="@color/card_color"
+        app:cardCornerRadius="3dp"
+        app:cardElevation="5dp"
+        tools:ignore="PrivateResource">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/coinName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BitCoin"
+                android:textSize="25sp"
+                android:textColor="@color/textColor1"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_margin="7dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:id="@+id/price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="Price : 65435"
+                    android:textColor="@color/textColor2"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/high"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="High : 654321"
+                    android:textColor="@color/textColor2"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/Open"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="Open : 654321"
+                    android:textColor="@color/textColor2"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/Low"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="Low : 654321"
+                    android:textColor="@color/textColor2"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/Volume"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Volume : 23456.456"
+                android:textColor="@color/textColor2"
+                android:layout_margin="5dp"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/TradeID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Last Trade ID : 23456.456"
+                android:textColor="@color/textColor2"
+                android:layout_margin="5dp"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/Update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="Last Update : 7 : 41 PM"
+                android:textColor="@color/textColor2"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:layout_marginTop="15dp"
+        app:cardBackgroundColor="@color/card_color"
+        app:cardCornerRadius="3dp"
+        app:cardElevation="5dp">
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/LineChart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </com.github.mikephil.charting.charts.LineChart>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        app:cardElevation="5dp"
+        app:cardCornerRadius="3dp"
+        app:cardBackgroundColor="@color/card_color">
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/BarChart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </com.github.mikephil.charting.charts.BarChart>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        app:cardElevation="5dp"
+        app:cardCornerRadius="3dp"
+        app:cardBackgroundColor="@color/card_color">
+
+       <com.github.mikephil.charting.charts.PieChart
+           android:id="@+id/PieChart"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+
+       </com.github.mikephil.charting.charts.PieChart>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:cardElevation="5dp"
+        app:cardCornerRadius="3dp"
+        app:cardBackgroundColor="@color/card_color">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="5dp">
+            
+            <EditText
+                android:id="@+id/Value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textColor="@color/textColor2"
+                android:textSize="20sp"
+                android:layout_margin="5dp"/>
+
+            <TextView
+                android:id="@+id/currency"
+                android:text="BTC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textColor2"
+                android:textSize="20sp"
+                android:layout_margin="5dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="= RSD"
+                android:textColor="@color/textColor2"
+                android:textSize="20dp"/>
+            <TextView
+                android:id="@+id/answer"
+                android:text="65467"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textColor2"
+                android:textSize="20sp"
+                android:layout_margin="5dp"
+                />
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:id="@+id/send"
+                android:background="@color/colorAccent"
+                android:padding="5dp"
+                android:layout_marginStart="5dp"
+                android:src="@drawable/ic_send_black_24dp"
+
+
+                />
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>
+</ScrollView>
